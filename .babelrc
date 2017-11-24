@@ -1,0 +1,37 @@
+{
+  "presets": [
+    "stage-0",
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "ie >= 7"
+          ],
+          "node": true,
+          "include": [
+            "./src",
+            "./test",
+            "./assets"
+          ],
+          "exclude": [
+            "node_modules"
+          ]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "transform-runtime",
+      {
+        "helpers": true,
+        "polyfill": true,
+        "debug": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
+      }
+    ]
+  ]
+}
